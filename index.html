@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Triangle — UMN Chapter</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Triangle Fraternity — Minnesota Chapter. Fraternity of engineers, architects, and scientists at the University of Minnesota." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <!-- plain text logo to avoid asset dependency -->
+        <a href="/" class="logo">Triangle &mdash; UMN</a>
+      </div>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="mainNav">
+        ☰
+      </button>
+
+      <nav id="mainNav" class="main-nav" role="navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#officers">Officers</a></li>
+          <li><a href="#rush">Rush</a></li>
+          <li class="social"><a href="https://www.instagram.com/triangle_umn/" target="_blank" rel="noopener">Instagram</a></li>
+          <li class="social"><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>We Are Triangle</h1>
+        <p class="lead">
+          A fraternity of engineers, architects, and scientists that develops balanced men who cultivate
+          high moral character, foster lifelong friendships, and live their lives with integrity.
+        </p>
+        <p>
+          Our organization is dedicated to helping men with interests in these areas realize their full potential
+          in college and develop into well-rounded, academically driven men who are involved on campus.
+        </p>
+        <a class="btn" href="#rush">Join Triangle</a>
+      </div>
+    </section>
+
+    <section id="about" class="info container">
+      <h2>About Us</h2>
+      <p>
+        We own two houses in the Dinkytown area, located at the intersection of 12th Ave SE and 6th St SE.
+      </p>
+      <p>
+        Information about our National Organization can be found at
+        <a href="https://triangle.org" target="_blank" rel="noopener">triangle.org</a>.
+      </p>
+    </section>
+
+    <section id="rush" class="container join">
+      <h2>Join Triangle</h2>
+      <p>
+        We are looking for undergraduate men that want to be academically successful and that lead by example.
+        If you are interested in joining Triangle Fraternity please either email our VP of Recruitment at
+        <a href="mailto:triangle@umn.edu">triangle@umn.edu</a> or join us for one of our upcoming rush events.
+      </p>
+    </section>
+
+    <section id="officers" class="container officers">
+      <h2>Officers</h2>
+      <p>Officer list and roles — (replace this text with your current officer roster).</p>
+
+      <!-- Example cards: replace with actual names & roles -->
+      <div class="card-grid">
+        <article class="card">
+          <h3>President</h3>
+          <p>Firstname Lastname</p>
+        </article>
+        <article class="card">
+          <h3>VP Recruitment</h3>
+          <p>Firstname Lastname</p>
+        </article>
+        <article class="card">
+          <h3>Treasurer</h3>
+          <p>Firstname Lastname</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:triangle@umn.edu">triangle@umn.edu</a></p>
+      <p>Address: <a href="https://www.google.com/maps/search/521+SE+12th+Ave+Minneapolis+MN" target="_blank" rel="noopener">521 SE 12th Ave, Minneapolis, MN</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Triangle — UMN Chapter</p>
+      <nav class="footer-links">
+        <a href="https://www.instagram.com/triangle_umn/" target="_blank" rel="noopener">Instagram</a> ·
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // small JS: mobile nav toggle and dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      mainNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
